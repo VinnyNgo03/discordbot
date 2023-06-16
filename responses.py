@@ -9,7 +9,9 @@ def get_response(message: str) -> str:
     p_message = message.lower()
 
     if p_message == '!help':
-        return "!dice : roll a dice"
+        return "!dice : roll a dice\n" \
+               "!coin : coin flip\n" \
+               "!bd {name} : birthday of {name}"
 
     if p_message == '!dice':
         return str(random.randint(1, 6))

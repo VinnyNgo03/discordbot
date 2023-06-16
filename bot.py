@@ -41,7 +41,7 @@ def run_discord_bot():
         if user_message[0] == '?':
             user_message = user_message[1:]
             await send_message(message, user_message, is_private=True)
-        if user_message[0] == '!':
+        elif user_message[0] == '!':
             await send_message(message, user_message, is_private=False)
 
     client.run(os.getenv('TOKEN'))
